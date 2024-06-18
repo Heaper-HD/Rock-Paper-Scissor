@@ -131,9 +131,16 @@ int main()
 				}
 				break;
 			}
+			std::this_thread::sleep_for(std::chrono::seconds(2));
+			eraseLines(4);
 		}
+
+		if (allowRollTool == false)
+		{
+			std::this_thread::sleep_for(std::chrono::seconds(2));
+			eraseLines(3);
+		}
+
 		allowRollTool = true;
-		std::this_thread::sleep_for(std::chrono::seconds(2));
-		eraseLines(4);
 	}
 }
